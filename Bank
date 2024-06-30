@@ -1,0 +1,79 @@
+
+public class Bank {
+	
+	private String Number;
+	private double Balance;
+	private String Name;
+	private String PhoneNumber;
+	
+	
+	public Bank(String Number,double Balance,String Name,String PhoneNumber) {
+		this.Number = Number;
+		this.Balance = Balance;
+		this.Name = Name;
+		this.PhoneNumber = PhoneNumber;
+		
+	}
+
+
+	public String getNumber() {
+		return Number;
+	}
+
+
+	public void setNumber(String number) {
+		Number = number;
+	}
+
+
+	public double getBalance() {
+		return Balance;
+	}
+
+
+	public void setBalance(double balance) {
+		Balance = balance;
+	}
+
+
+	public String getName() {
+		return Name;
+	}
+
+
+	public void setName(String name) {
+		Name = name;
+	}
+
+
+	public String getPhoneNumber() {
+		return PhoneNumber;
+	}
+
+
+	public void setPhoneNumber(String phoneNumber) {
+		PhoneNumber = phoneNumber;
+	}
+	
+	
+	
+	public void DepositeMoney(double Deposite) {
+		this.Balance = Balance+ Deposite;
+		System.out.println("Deposite is SuccessFull, new balance is.."+this.Balance);
+		
+	}
+	
+	
+	public void WithdrawMoney(double Withdraw) {
+		if(this.Balance-Withdraw <0) {
+			System.out.println("your current balance is "+this.Balance+"You can not withdraw"+Withdraw);
+			
+		}
+		else {
+			this.Balance = Balance-Withdraw;
+			System.out.println("Withdraw is SuccessFull, new balance is.."+this.Balance);
+			
+		}
+	}
+
+}
